@@ -88,7 +88,7 @@ abstract class AbstractDnsHandler implements DnsHandlerInterface
 
         $hostnameErrorInfo = 'Invalid hostname ' . json_encode($hostName);
 
-        if (!filter_var($hostName, FILTER_VALIDATE_DOMAIN, FILTER_FLAG_HOSTNAME)) {
+        if (!filter_var($hostName, FILTER_VALIDATE_DOMAIN)) {
             throw new DnsHandlerException(
                 $hostnameErrorInfo . ' format!',
                 DnsHandlerException::HOSTNAME_FORMAT_INVALID

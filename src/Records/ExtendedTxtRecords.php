@@ -103,7 +103,7 @@ class ExtendedTxtRecords
      */
     private function isDomainOrSubdomainHostName(string $host): bool
     {
-        return (bool) filter_var($host, FILTER_VALIDATE_DOMAIN, FILTER_FLAG_HOSTNAME);
+        return (bool) filter_var($host, FILTER_VALIDATE_DOMAIN);
     }
 
     private function isDomainKeyHostName(string $host): bool
